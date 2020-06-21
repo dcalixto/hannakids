@@ -1,0 +1,47 @@
+<footer class="bt b--black-10 mt4">
+  {% if site.data.information %} {% assign info = site.data.information %}
+  <div class="center mw9 pa3 flex flex-column flex-wrap-m flex-row-ns">
+    <div class="flex-auto pa4-ns pa3 w-30-ns w-50-m">
+      <ul>
+        <li>
+          <i class="fa fa-phone"></i>
+          <a href="tel:(21) 98865-8826"> {{info.phone}}</a>
+        </li>
+
+        <li>
+          <i class="fa fa-envelope"></i>
+          <a href="mailto:shijezini@gmail.com.com">{{info.email}}</a>
+        </li>
+
+        <li>
+          <p class="text-center">
+            <small>© 2020. HannaKids</small>
+          </p>
+        </li>
+        <li><a href="https://www.netjapa.com">NETJAPA</a></li>
+      </ul>
+    </div>
+
+    {% endif %}
+
+    <div class="lex-auto pa4-ns pa3 w-30-ns w-50-m">
+      {% if site.data.information %} {% assign info = site.data.information %}
+      <ul class="list-unstyled">
+        <li class="social-icons">
+          <a href="https://www.facebook.com/hannakids" target="_blank">
+            <i class="fa fa-facebook-square fa-2x fa-fh"></i>
+          </a>
+
+          <a href="https://www.instagram.com/hannakids" target="_blank">
+            <i class="fa fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://www.youtube.com/hannakids" target="_blank">
+            <i class="fa fa-youtube-play fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</footer>
+<!-- end footer section -->

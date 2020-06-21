@@ -1,0 +1,103 @@
+# Basic settings
+
+url: "https://www.hannakids.com.br" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "HannaKids | Moda Infantil, Body e roupas para bebês e crianças - Rio de Janeiro, RJ" # the name of your site, e.g. ACME Corp.
+description: "Compre online Body para Bebê e Body Infantil na HannaKids. Conforto para o seu bebê. Tudo em até 6x sem juros no Rio de Janeiro, RJ"
+
+lang: "pt-BR"
+
+# Build settings
+markdown: kramdown
+
+# Kramdown options
+kramdown:
+  # Prevent IDs from being added to h1-h6 tags
+  auto_ids: false
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+  - jekyll-menus
+#paginate: 3
+#paginate_path: service/page:num/
+paginate: 12
+paginate_path: posts/page:num/
+
+#Permalink
+permalink: /post/:title
+source: .
+destination: ./_site
+# Compress CSS
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+#Permalink format (/blog/ is ignored for pages)
+#permalink: /post/:title
+#permalink: :slug/
+
+#Collections
+collections:
+  slides:
+include:
+  - _pages
+  - _posts
+  - _slides
+section: true
+
+# set to 'true' to enable Netlify CMS (/admin) in production builds
+netlifycms: false
+
+# set to 'true' to enable Google Analytics tracking code in production builds
+analytics: false
+
+# Compress HTML (in liquid via layouts/compress.html)
+compress_html:
+  clippings: all
+
+# Social
+
+social:
+  name: HannaKids
+  links:
+    - https://twitter.com/hannakids
+    - https://www.facebook.com/hannakids
+
+# set some common post defaults
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post" # set the correct default template for a post
+      section: "post" # set the root section name
+
+# Include in processing (e.g. Netlify directives)
+# Uncomment before use
+
+#include:
+#  - _redirects
+#  - _headers
+
+# Exclude from processing.
+# The following items will not be processed.
+
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  shortname: hannakids
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - netlify.toml
+  - feed.xml
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
