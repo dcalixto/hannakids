@@ -1,5 +1,5 @@
 ---
-heading: Agilidade e rapidez
-text: na entrega do serviço
-image: /photos/banner-ferrari.jpg
+heading: Na compra de 2 bodies
+text: ganhe uma mascara
+image: /photos/bebe3.jpg
 ---

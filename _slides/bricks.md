@@ -1,5 +1,5 @@
 ---
-heading: Projetamos de acordo
-text: com sua necessidade
-image: /photos/banner-bricks.jpg
+heading: Body Bebe
+text: com precos incriveis
+image: /photos/bebe5.jpg
 ---

@@ -6,16 +6,19 @@
       {% include header.html %}
       {% if page.url == "/" %}
       {% include banner.html %}
+      {% include posts.html %}
       {% endif %}
 
 
-     <!-- {% include posts.html %}-->
-      <main>
+
+   
         <div class="flex flex-column">
           <div class="bg-white dark-gray npm-content">
 {{content}}
 </div>
 </div>
+
       {% include footer.html %}
+      {% include script.html %}
   </body>
 </html>

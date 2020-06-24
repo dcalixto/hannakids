@@ -210,14 +210,27 @@ section {
   flex-flow: row wrap;
 }
 
-.main {
-  position: relative;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.f6cf753b {
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
 }
+
+@media screen and (min-width: 30em) {
+.mt5-ns {
+    margin-top: 4rem;
+}
+}
+
+@media screen and (min-width: 30em){
+.ph4-ns {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}}
+@media screen and (min-width: 30em){
+.flex-row-ns {
+    flex-direction: row;
+}}
+@media screen and (min-width: 30em){
+.flex-ns {
+    display: flex;
+}}

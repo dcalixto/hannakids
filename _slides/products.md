@@ -1,5 +1,5 @@
 ---
-heading: Invista em seu negócio
-text: Faça já sua loja online
-image: /photos/banner-products.jpg
+heading: Body Estiloso
+text: e moderno
+image: /photos/bebe6.jpg
 ---

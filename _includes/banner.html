@@ -1,35 +1,33 @@
-<div class="w-80 overflow-hidden ma0 center">
-  <section id="banner">
-    <!-- Slider main container -->
-    <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        {% for slide in site.slides limit:5 %}
-        <!-- Slides -->
+<section id="banner">
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      {% for slide in site.slides limit:5 %}
+      <!-- Slides -->
 
-        <div
-          class="swiper-slide"
-          style="background-image: url('{{ slide.image }}');"
-        >
-          <div class="banner-text">
-            <p>{{ slide.heading }}</p>
+      <div
+        class="swiper-slide"
+        style="background-image: url('{{ slide.image }}');"
+      >
+        <div class="banner-text">
+          <p>{{ slide.heading }}</p>
 
-            <p class="lead text-shadow-default">
-              {{ slide.text }}
-            </p>
-          </div>
+          <p class="lead text-shadow-default">
+            {{ slide.text }}
+          </p>
         </div>
-
-        {% endfor %}
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
 
-      <!-- If we need navigation buttons -->
-      <div id="navigation_buttons">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
+      {% endfor %}
     </div>
-  </section>
-</div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div id="navigation_buttons">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
