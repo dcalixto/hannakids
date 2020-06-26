@@ -97,9 +97,9 @@
 /*@import './imports/_variables';*/
 
 /* Debugging */
-@import "./imports/_debug-children";
+/*@import "./imports/_debug-children";
 @import "./imports/_debug-grid";
-@import "./imports/_debug";
+@import "./imports/_debug";*/
 
 /* Uncomment out the line below to help debug layout issues */
 /*@import './imports/_debug';*/
@@ -211,26 +211,29 @@ section {
 }
 
 .f6cf753b {
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 @media screen and (min-width: 30em) {
-.mt5-ns {
+  .mt5-ns {
     margin-top: 4rem;
-}
+  }
 }
 
-@media screen and (min-width: 30em){
-.ph4-ns {
+@media screen and (min-width: 30em) {
+  .ph4-ns {
     padding-left: 2rem;
     padding-right: 2rem;
-}}
-@media screen and (min-width: 30em){
-.flex-row-ns {
+  }
+}
+@media screen and (min-width: 30em) {
+  .flex-row-ns {
     flex-direction: row;
-}}
-@media screen and (min-width: 30em){
-.flex-ns {
+  }
+}
+@media screen and (min-width: 30em) {
+  .flex-ns {
     display: flex;
-}}
+  }
+}
