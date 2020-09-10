@@ -1,27 +1,33 @@
 
-
-
-<header class="dt w-100 border-box pa3 ph5-ns bb b--black-10">
-
-
-    <h1 class="dtc v-mid mid-gray link dim w-25 logo ">
-        <a class="" href="{{ "/" | relative_url }}">
-         
+<header class="site-header"  style="background-color: #fff;">
+  <div class="container ">
+      <div
+      class="ui pointing menu stackable "
+      role="navigation"
+      aria-label="Main menu"
+    >
+    <h1 class="logo ">
+        <a href="{{ "/" | relative_url }}">
+        
         </a>
       </h1>
-        
-
-     <div class="dtc v-mid w-75 tr">
-     
+ 
+      <div class="right menu navigation">
         {% include navigation.html navigation=site.data.navigation %} 
      
       </div>
-
-    
-
-  
+      <div class="hamburger">
+        <span class="hamburger-bun"></span>
+        <span class="hamburger-patty"></span>
+        <span class="hamburger-bun"></span>
+      </div>
+     <!--</nav>-->
+  </div>
+    </div>
 
   
 </header>
+
+
 
 <!-- end of Header section -->

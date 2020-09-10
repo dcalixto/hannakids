@@ -2,58 +2,68 @@
 layout: default
 ---
 
+<section class="grey-card-no-padding">
+  <div class="container  pure-g">
+    <div class="gallery-container">
+      <div class="pure-u-1 pure-u-md-1">
+        <div class="grid-layout">
+          <div class="container  pure-g">
+            <div class="pure-u-1 pure-u-md-1">
+              <h1 style="margin-left: 15px">Bodies</h1>
+            </div>
+            {% for post in site.posts %}
 
-       
-<div class="pv5 ph3 bg-white">
-  <div class="flex flex-wrap mw8 center tc tl-ns lh-copy">
-     {% for post in paginator.posts %}
-    <div class="outline w-25-l w-50-ns w-100 pa3 pb5 pb3-l ">
-      <div class="mb3 tc tl-ns">
-        <a href="{{ post.url }}">
-          <img src="{{ post.post-images[0] }}" alt="" />
-        </a>
-      </div>
-      <div class="f5">
-        <span><a href="{{ post.url }}">{{ post.title }}</a></span>
-      </div>
-    </div>
-   {% endfor %}
-  </div>
-</div>
-
-       
-<div class="pv5 ph3 bg-white">
-  <div class="flex flex-wrap mw8 center tc tl-ns lh-copy">
-   <!-- pagination -->
-          {% if paginator.total_pages > 1 %}
-          <div class="pagination">
-            {% if paginator.previous_page %}
-            <a
-              href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-              >&laquo; Voltar</a
-            >
-            {% else %}
-            <span>&laquo; Voltar</span>
-            {% endif %} {% for page in (1..paginator.total_pages) %} {% if page
-            == paginator.page %}
-            <span class="webjeda">{{ page }}</span>
-            {% elsif page == 1 %}
-            <a href="/posts/">{{ page }}</a>
-            {% else %}
-            <a
-              href="{{ paginator.next_page_path| prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
-              >{{ page }}</a
-            >
-            {% endif %} {% endfor %} {% if paginator.next_page %}
-            <a
-              href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-              >Próximo &raquo;</a
-            >
-            {% else %}
-            <span>Próximo &raquo;</span>
-            {% endif %}
+            <div class=" pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+              <div class="card">
+                <div class="card-header">
+                  <a href="{{ post.url }}">
+                    <img src="{{ post.post-images[0] }}" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+                  <p>{{post.body}}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
           </div>
-          {% endif %}
         </div>
       </div>
+    </div>
+  </div>
+</section>
+<div class="container  pure-g">
+  <div class="pure-u-1 pure-u-md-1">
+    <!-- pagination -->
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a
+        href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+        >&laquo; Voltar</a
+      >
+      {% else %}
+      <span>&laquo; Voltar</span>
+      {% endif %} {% for page in (1..paginator.total_pages) %} {% if page ==
+      paginator.page %}
+      <span class="webjeda">{{ page }}</span>
+      {% elsif page == 1 %}
+      <a href="/posts/">{{ page }}</a>
+      {% else %}
+      <a
+        href="{{ paginator.next_page_path| prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
+        >{{ page }}</a
+      >
+      {% endif %} {% endfor %} {% if paginator.next_page %}
+      <a
+        href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+        >Próximo &raquo;</a
+      >
+      {% else %}
+      <span>Próximo &raquo;</span>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
 </div>

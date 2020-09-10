@@ -4,21 +4,16 @@
   {% include head.html %}
   <body>
       {% include header.html %}
-      {% if page.url == "/" %}
-      {% include banner.html %}
-      {% include posts.html %}
-      {% endif %}
-
-
-
-   
-        <div class="flex flex-column">
-          <div class="bg-white dark-gray npm-content">
-{{content}}
-</div>
-</div>
-
+      
+      <main>
+        <div >
+    {{ content}}
+  </div>
+      </main>
       {% include footer.html %}
       {% include script.html %}
+   
   </body>
 </html>
+
+
